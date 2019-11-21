@@ -42,7 +42,7 @@ func (cs *CoSchedulingPlugin) Permit(ctx context.Context, state *framework.Cycle
 	if targetGang.Spec.MinGang<=1 {
 		return framework.NewStatus(framework.Success,""),0
 	}
-	
+
 	//iterate waiting pods and count gang pod number
 	count := int32(1) //count gang pod number
 	search := func(p framework.WaitingPod) {
